@@ -18,22 +18,44 @@
         <div id="table-border">
             <div id="table">
                 <div id="betting-rows">
-                    <div id="bs-a" class="betting-square"></div>
-                    <div id="bs-2" class="betting-square"></div>
-                    <div id="bs-3" class="betting-square"></div>
-                    <div id="bs-4" class="betting-square"></div>
-                    <div id="bs-5" class="betting-square"></div>
-                    <div id="bs-6" class="betting-square"></div>
-                    <div id="bs-7" class="betting-square"></div>
-                    <div id="bs-8" class="betting-square"></div>
-                    <div id="bs-9" class="betting-square"></div>
-                    <div id="bs-T" class="betting-square"></div>
-                    <div id="bs-J" class="betting-square"></div>
-                    <div id="bs-Q" class="betting-square"></div>
-                    <div id="bs-K" class="betting-square"></div>
+                    <div id="bs-a" class="betting-square">A</div>
+                    <div id="bs-2" class="betting-square">2</div>
+                    <div id="bs-3" class="betting-square">3</div>
+                    <div id="bs-4" class="betting-square">4</div>
+                    <div id="bs-5" class="betting-square">5</div>
+                    <div id="bs-6" class="betting-square">6</div>
+                    <div id="bs-7" class="betting-square">7</div>
+                    <div id="bs-8" class="betting-square">8</div>
+                    <div id="bs-9" class="betting-square">9</div>
+                    <div id="bs-t" class="betting-square">10</div>
+                    <div id="bs-j" class="betting-square">J</div>
+                    <div id="bs-q" class="betting-square">Q</div>
+                    <div id="bs-k" class="betting-square">K</div>
                 </div>
             </div>
         </div>
+        <h1 id="wager-slider-title">Select Wager Amount</h1>
+        <div id="wager-amount-slider">
+            <input type="radio" name="wager-amount" id="1" value="1" required checked />
+            <label for="1" data-wager-amount="$1"></label>
+            <input type="radio" name="wager-amount" id="2" value="5" required />
+            <label for="2" data-wager-amount="$5"></label>
+            <input type="radio" name="wager-amount" id="3" value="10" required />
+            <label for="3" data-wager-amount="$10"></label>
+            <input type="radio" name="wager-amount" id="4" value="25" required />
+            <label for="4" data-wager-amount="$25"></label>
+            <input type="radio" name="wager-amount" id="5" value="100" required />
+            <label for="5" data-wager-amount="$100"></label>
+            <div id="wager-amount-tick"></div>
+            <br>
+        </div>
+        <div id="current-player-balance-display" class="ui-tally">
+            Player Balance: <span id="player-balance-display"></span>
+        </div>
+        <div id="total-current-wager-display" class="ui-tally">
+            Total Amount Wagered: <span id="total-wager-display"></span>
+        </div>
+        <div id="total-winnings-display" class="ui-tally">Total Winnings: <span id="totalWinnings"></span></div>
     </div>
 
 
