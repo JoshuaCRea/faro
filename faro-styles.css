@@ -22,3 +22,132 @@ body {
     border-width: 25px;
     border-radius: 50px;
 }
+
+#wager-slider-title {
+    top: 830px;
+    left: 635px;
+    font-weight: 400;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    color: #FAF5E4;
+    font-size: 36pt;
+}
+
+#wager-amount-slider {
+    top: 910px;
+    left: 500px;
+    display: flex;
+    position: relative;
+    width: 50%;
+    height: 50px;
+}
+
+#wager-amount-slider::before {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: calc(100% * (4 / 5));
+    top: 50%;
+    left: 37%;
+    transform: translate(-50%, -50%);
+    background: #000;
+}
+
+#wager-amount-slider label {
+    position: relative;
+    width: 20%;
+    color: #FAF5E4;
+}
+
+#wager-amount-slider label::before {
+    content: attr(data-wager-amount);
+    position: absolute;
+    left: 50%;
+    padding-top: 10px;
+    transform: translate(-115px, 40px);
+    font-size: 16px;
+    font-family: 'Arvo', serif;
+}
+
+#wager-amount-slider label::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translate(-38px, -50%);
+    width: 30px;
+    height: 30px;
+    border: 2px solid #000;
+    background: #fff;
+    border-radius: 50%;
+}
+
+#wager-amount-slider label:hover::after {
+    top: -65%;
+    left: 34%;
+    transform: translate(-93px, 40px) scale(1.25);
+}
+
+#wager-amount-slider input {
+    display: none;
+}
+
+#wager-amount-slider input:checked:nth-child(1)~#wager-amount-tick {
+    left: -2.6%;
+}
+
+#wager-amount-slider input:checked:nth-child(3)~#wager-amount-tick {
+    left: 17.4%;
+}
+
+#wager-amount-slider input:checked:nth-child(5)~#wager-amount-tick {
+    left: 37.4%;
+}
+
+#wager-amount-slider input:checked:nth-child(7)~#wager-amount-tick {
+    left: 57.4%;
+}
+
+#wager-amount-slider input:checked:nth-child(9)~#wager-amount-tick {
+    left: 77.4%;
+}
+
+#wager-amount-tick {
+    position: absolute;
+    top: 50%;
+    width: 12px;
+    height: 12px;
+    background: #000;
+    border-radius: 50%;
+    transition: all 0.15s ease-in-out;
+    transform: translate(-50%, -50%);
+    border: 2px solid #fff;
+}
+
+.ui-tally {
+    font-family: "Merriweather", serif;
+    font-size: 16pt;
+    color: #FAF5E4;
+    max-height: 30px;
+}
+
+#current-player-balance-display {
+    top: 987px;
+    left: 645px;
+}
+
+#total-current-wager-display {
+    top: 1015px;
+    left: 555px;
+}
+
+#total-wager-display {
+    color: #3FA796;
+    font-family: "Arvo", serif;
+    font-size: 20pt;
+}
+
+#player-balance-display {
+    color: #a2ffa2;
+    font-family: "Arvo", serif;
+    font-size: 20pt;
+}
